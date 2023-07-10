@@ -1,0 +1,70 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    background-image: url(https://img.freepik.com/free-vector/stream-binary-code-design-vector_53876-161367.jpg?size=626&ext=jpg&ga=GA1.2.806039422.1686203747&semt=ais);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: aliceblue;
+}
+
+main {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(255, 166, 0);
+    font-size: large;
+    font-weight: 700;
+}
+
+footer {
+    text-decoration: none;
+    color: rgb(204, 218, 230);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(204, 218, 230);
+}
+
+@keyframes Name {
+    from {
+        color: aquamarine;
+    }
+
+    to {
+        color: rgb(251, 255, 0);
+    }
+}
+
+.name {
+    color: aquamarine;
+    font-size: x-large;
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 2px 4px 10px;
+    transition: width 2s, height 2s, transform 2s;
+    animation-name: Name;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+div {
+    text-align: center;
+    text-decoration: none;
+}
+
+.name:hover {
+    transform: rotate(180deg);
+}
