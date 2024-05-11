@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to My Website</title>
+    <style>
+      #splash-page {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  background-color: #141640;
+      }
+
+      #splash-page-heading {
+        font-size: 3em;
+        margin-bottom: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        color: rgb(255, 166, 0);
+      }
+
+      #splash-page-content {
+        font-size: 1.5em;
+        color: rgb(255, 166, 0);
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="splash-page">
+      <h1 id="splash-page-heading"></h1>
+      <p id="splash-page-content">Welcome to my website!</p>
+      <script>
+        const heading = document.getElementById('splash-page-heading');
+        const paragraph = document.getElementById('splash-page-content');
+        const headingText = 'Hi!! This is Sriram here...';
+        const paragraphText = 'Welcome to my website!';
+        let index = 0;
+
+        function typeWriterHeading() {
+            if (index < headingText.length) {
+                heading.innerHTML += headingText.charAt(index);
+                index++;
+                setTimeout(typeWriterHeading, 100);
+            } else {
+                paragraph.style.display = 'block';
+            }
+        }
+
+        typeWriterHeading();
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 4500);
+        });
+      </script>
+    </div>
+  </body>
+</html>
