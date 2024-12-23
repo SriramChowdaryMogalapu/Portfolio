@@ -1,62 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to My Website</title>
-    <style>
-      #splash-page {
-        height: 97vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-  background-color: #141640;
-      }
 
-      #splash-page-heading {
-        font-size: 3em;
-        margin-bottom: 10px;
-        overflow: hidden;
-        white-space: nowrap;
-        color: rgb(255, 166, 0);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Sriram Chowdary Mogalapu" />
+  <meta name="keywords"
+    content="Portfolio,Html,Css,JavaScript,Sriram,SriramChowdary,Mogalapu,Sriram Chowdary Mogalapu,SriramChowdaryMogalapu,Chowdary" />
+  <meta name="description" content="Portfolio of Sriram Chowdary Mogalapu" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+  <link rel="icon" href="logo.webp">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sriram Chowdary Mogalapu's Portfolio" />
+  <meta property="og:image" content=<img src="logo.webp" />
+  <meta property="og:description" content="Detailed description about Sriram Chowdary Mogalapu" />
+  <meta property="og:url" content="https://sriram-chowdary.netlify.app/">
+  <meta property="og:site_name" content="Sriram Chowdary Mogalapu's Portfolio">
+  <title>Portfolio</title>
+  <script src="https://kit.fontawesome.com/11db026357.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <title>Welcome to My Website</title>
+  <style>
+    #splash-page {
+      height: 97vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #141640;
+    }
 
-      #splash-page-content {
-        font-size: 1.5em;
-        color: rgb(255, 166, 0);
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="splash-page">
-      <h1 id="splash-page-heading"></h1>
-      <p id="splash-page-content">Welcome to my website!</p>
-      <script>
-        const heading = document.getElementById('splash-page-heading');
-        const paragraph = document.getElementById('splash-page-content');
-        const headingText = 'Hi!! This is Sriram here...';
-        const paragraphText = 'Welcome to my website!';
-        let index = 0;
+    #splash-page-heading {
+      font-size: 3em;
+      margin-bottom: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      color: rgb(255, 166, 0);
+    }
 
-        function typeWriterHeading() {
-            if (index < headingText.length) {
-                heading.innerHTML += headingText.charAt(index);
-                index++;
-                setTimeout(typeWriterHeading, 100);
-            } else {
-                paragraph.style.display = 'block';
-            }
+    #splash-page-content {
+      font-size: 1.5em;
+      color: rgb(255, 166, 0);
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="splash-page">
+    <h1 id="splash-page-heading"></h1>
+    <p id="splash-page-content">Welcome to my website!</p>
+    <script>
+      const heading = document.getElementById('splash-page-heading');
+      const paragraph = document.getElementById('splash-page-content');
+      const headingText = 'Hi!! This is Sriram here...';
+      const paragraphText = 'Welcome to my website!';
+      let index = 0;
+
+      function typeWriterHeading() {
+        if (index < headingText.length) {
+          heading.innerHTML += headingText.charAt(index);
+          index++;
+          setTimeout(typeWriterHeading, 100);
+        } else {
+          paragraph.style.display = 'block';
         }
+      }
 
-        typeWriterHeading();
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                window.location.href = "home.html";
-            }, 4500);
-        });
-      </script>
-    </div>
-  </body>
+      typeWriterHeading();
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+          window.location.href = "home.html";
+        }, 4500);
+      });
+    </script>
+  </div>
+</body>
+
 </html>
