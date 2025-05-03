@@ -298,24 +298,45 @@ document.addEventListener('DOMContentLoaded', function() {
       const phone = document.getElementById('phone').value;
       const message = document.getElementById('message').value;
       
-      // Send email using SMTP.js
-      Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: CONFIG.email,
-        Password: "BE6ADC70400AEBC03E23307414A8B6C95F42", // Consider using environment variables for this
-        To: CONFIG.email,
-        From: CONFIG.email,
-        Subject: "Form Submission in Portfolio",
-        Body: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Message:</strong> ${message}</p>
-        `
-      }).then(message => {
-        alert("Message sent successfully!");
-        contactForm.reset();
+      // Get form data
+      const formData = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message
+      };
+      
+      // Show loading indicator
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending...';
+      submitBtn.disabled = true;
+      
+      // Send data to server API
+      fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert("Message sent successfully!");
+          contactForm.reset();
+        } else {
+          alert("Failed to send message. Please try again later.");
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert("An error occurred. Please try again later.");
+      })
+      .finally(() => {
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
       });
     });
   }
