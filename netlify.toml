@@ -1,7 +1,5 @@
-/**
- * Netlify Configuration for Sriram Chowdary Mogalapu Portfolio
- * Advanced SEO, Security, and Performance Optimizations
- */
+# Netlify Configuration for Sriram Chowdary Mogalapu Portfolio
+# Advanced SEO, Security, and Performance Optimizations
 
 [build]
   # Build configuration
