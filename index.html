@@ -3,81 +3,76 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/webp" href="/logo.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Basic SEO Meta Tags -->
   <meta name="author" content="Sriram Chowdary Mogalapu" />
   <meta name="keywords"
-    content="Portfolio,Html,Css,JavaScript,Sriram,SriramChowdary,Mogalapu,Sriram Chowdary Mogalapu,SriramChowdaryMogalapu,Chowdary" />
-  <meta name="description" content="Portfolio of Sriram Chowdary Mogalapu" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
-  <link rel="icon" href="logo.webp">
+    content="Portfolio,React,JavaScript,Sriram,SriramChowdary,Mogalapu,Sriram Chowdary Mogalapu,SriramChowdaryMogalapu,Mogalapu Sriram Chowdary,Sriram Chowdary,Chowdary,Full Stack Developer,Data Solution Architect,Associate Data Solution Architect,Piramal Finance,Data Science,NIT Raipur,MERN Stack,Node.js,MongoDB,AWS,Azure,Machine Learning,Competitive Programming,LeetCode" />
+  <meta name="description"
+    content="Modern Portfolio of Sriram Chowdary Mogalapu - Data Solution Architect at Piramal Finance, NIT Raipur Graduate, Full Stack Developer specializing in MERN Stack, AWS, Azure, and Data Science" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="rating" content="general" />
+
+  <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sriram Chowdary Mogalapu's Portfolio" />
-  <meta property="og:image" content="<?= base_url('logo.webp'); ?>" />
-  <meta property="og:description" content="Detailed description about Sriram Chowdary Mogalapu" />
+  <meta property="og:title"
+    content="Sriram Chowdary Mogalapu's Portfolio - Full Stack Developer & Data Solution Architect" />
+  <meta property="og:image" content="/logo.webp" />
+  <meta property="og:image:alt" content="Sriram Chowdary Mogalapu Portfolio Logo" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:description"
+    content="Modern Portfolio of Sriram Chowdary Mogalapu - Data Solution Architect at Piramal Finance, NIT Raipur Graduate, Full Stack Developer specializing in MERN Stack, AWS, Azure, and Data Science" />
   <meta property="og:url" content="https://sriram-chowdary.netlify.app/">
   <meta property="og:site_name" content="Sriram Chowdary Mogalapu's Portfolio">
-  <title>Portfolio</title>
-  <!-- Updated Font Awesome to latest version (6.5.1) -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-  <script src="script.js"></script>
-  <title>Welcome to My Website</title>
-  <style>
-    #splash-page {
-      height: 97vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #141640;
-    }
+  <meta property="og:locale" content="en_US" />
 
-    #splash-page-heading {
-      font-size: 3em;
-      margin-bottom: 10px;
-      overflow: hidden;
-      white-space: nowrap;
-      color: rgb(255, 166, 0);
-    }
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="Sriram Chowdary Mogalapu's Portfolio - Full Stack Developer & Data Solution Architect" />
+  <meta name="twitter:description"
+    content="Modern Portfolio of Sriram Chowdary Mogalapu - Data Solution Architect at Piramal Finance, NIT Raipur Graduate, Full Stack Developer specializing in MERN Stack, AWS, Azure, and Data Science" />
+  <meta name="twitter:image" content="/logo.webp" />
+  <meta name="twitter:image:alt" content="Sriram Chowdary Mogalapu Portfolio Logo" />
 
-    #splash-page-content {
-      font-size: 1.5em;
-      color: rgb(255, 166, 0);
-      display: none;
-    }
-  </style>
+  <!-- Mobile App Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Sriram Portfolio" />
+
+  <!-- Favicon and Icons -->
+  <link rel="apple-touch-icon" href="/logo.webp" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Verification Tags -->
+  <meta name="google-site-verification" content="e5MrDYEMveh5eiQxsUT42QCJ9msh_Ovdcj-o1SFoND4" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sriram-chowdary.netlify.app/" />
+
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Sriram Chowdary Mogalapu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div id="splash-page">
-    <h1 id="splash-page-heading"></h1>
-    <p id="splash-page-content">Welcome to my website!</p>
-    <script>
-      const heading = document.getElementById('splash-page-heading');
-      const paragraph = document.getElementById('splash-page-content');
-      const headingText = 'Hi!! This is Sriram here...';
-      const paragraphText = 'Welcome to my website!';
-      let index = 0;
-
-      function typeWriterHeading() {
-        if (index < headingText.length) {
-          heading.innerHTML += headingText.charAt(index);
-          index++;
-          setTimeout(typeWriterHeading, 100);
-        } else {
-          paragraph.style.display = 'block';
-        }
-      }
-
-      typeWriterHeading();
-      document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(function () {
-          window.location.href = "home.html";
-        }, 4500);
-      });
-    </script>
-  </div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>

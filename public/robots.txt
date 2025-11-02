@@ -1,0 +1,32 @@
+# robots.txt for https://sriram-chowdary.netlify.app
+
+# Allow all crawlers access to all content
+User-agent: *
+Allow: /
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block access to sensitive files
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://sriram-chowdary.netlify.app/sitemap.xml
+
+# Host declaration
+Host: https://sriram-chowdary.netlify.app
