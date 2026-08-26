@@ -92,6 +92,8 @@ const Skills = () => {
       {name: "LLM", level: 80, icon: GrGenai, color: "#FF6F00"},
       {name: "Embeddings", level: 75, icon: PiVectorThreeBold, color: "#4285F4"},
       {name: "RAG", level: 70, icon: RiFlashlightFill, color: "#FF9900"},
+      {name: "Vector Search", level: 78, icon: FaDatabase, color: "#29B5E8"},
+      {name: "Generative AI", level: 82, icon: RiAiGenerate2, color: "#5C2D91"},
     ],
     tools: [
       { name: "Git & GitHub", level: 92, icon: FaGitAlt, color: "#F05032" },
