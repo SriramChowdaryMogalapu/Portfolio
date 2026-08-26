@@ -16,6 +16,7 @@ import {
   FaDownload,
   FaExternalLinkAlt,
 } from "react-icons/fa";
+import { PiVectorThreeBold } from "react-icons/pi";
 import {
   SiMongodb,
   SiPostgresql,
@@ -32,6 +33,8 @@ import {
   SiLeetcode,
   SiCodechef,
 } from "react-icons/si";
+import { RiAiGenerate2, RiFlashlightFill } from "react-icons/ri";
+import { GrGenai } from "react-icons/gr";
 import SEO from "../components/SEO";
 import "./Skills.css";
 
@@ -48,12 +51,15 @@ const Skills = () => {
     { id: "frontend", label: "Frontend", icon: FaCode },
     { id: "backend", label: "Backend", icon: FaDatabase },
     { id: "datascience", label: "Data Science", icon: FaPython },
+    { id: "ai", label: "Artificial Intelligence", icon: RiAiGenerate2 },
     { id: "tools", label: "Tools & Others", icon: FaGitAlt },
   ];
 
   const skillsData = {
     frontend: [
       { name: "React.js", level: 90, icon: FaReact, color: "#61DAFB" },
+      { name: "Next.js", level: 85, icon: SiNextdotjs, color: "#000000" },
+      { name: "TypeScript", level: 82, icon: SiTypescript, color: "#3178C6" },
       { name: "JavaScript", level: 88, icon: FaJsSquare, color: "#F7DF1E" },
       { name: "HTML5 & CSS3", level: 92, icon: FaCode, color: "#E34F26" },
       { name: "Tailwind CSS", level: 85, icon: FaCode, color: "#06B6D4" },
@@ -81,6 +87,11 @@ const Skills = () => {
       { name: "Power BI", level: 88, icon: FaDatabase, color: "#F2C811" },
       { name: "Machine Learning", level: 78, icon: FaPython, color: "#FF6F00" },
       { name: "Data Science", level: 82, icon: FaDatabase, color: "#4285F4" },
+    ],
+    ai: [
+      {name: "LLM", level: 80, icon: GrGenai, color: "#FF6F00"},
+      {name: "Embeddings", level: 75, icon: PiVectorThreeBold, color: "#4285F4"},
+      {name: "RAG", level: 70, icon: RiFlashlightFill, color: "#FF9900"},
     ],
     tools: [
       { name: "Git & GitHub", level: 92, icon: FaGitAlt, color: "#F05032" },
@@ -255,8 +266,14 @@ const Skills = () => {
       },
       {
         "@type": "Skill",
-        name: "Cloud & DevOps",
-        description: "AWS, Azure, Docker, Kubernetes, Git, CI/CD",
+        name: "Artificial Intelligence",
+        description:
+          "LLM, Embeddings, RAG, Vector Search",
+      },
+      {
+        "@type": "Skill",
+        name: "Development Tools",
+        description: "Git, GitHub, VS Code, Docker, Kubernetes, CI/CD",
       },
     ],
   };
