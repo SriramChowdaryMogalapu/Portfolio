@@ -20,6 +20,11 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiFirebase,
+  SiPostgresql,
+  SiTailwindcss,
+  SiFastapi,
+  SiDjango,
+  SiDocker,
 } from "react-icons/si";
 import SEO from "../components/SEO";
 import "./Projects.css";
