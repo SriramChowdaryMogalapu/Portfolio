@@ -83,6 +83,35 @@ const Projects = () => {
       liveUrl: "https://crypto-notes.netlify.app",
       status: "Completed",
     },
+    {
+      id: 3,
+      title: "RepoMind",
+      category: "ai",
+      description:
+        "AI-powered codebase intelligence platform that helps users explore any GitHub repository through conversational Q&A with grounded code citations.",
+      longDescription:
+        "RepoMind is an AI-powered repository intelligence system designed to help developers understand large codebases faster. It ingests public GitHub repositories, breaks source code into structured chunks, embeds them using vector search, and answers natural-language questions grounded in the actual repository context. The platform combines semantic retrieval, keyword matching, and source-linked citations so every answer is traceable to the exact code lines.",
+      image: "/project3.png",
+      technologies: [
+        { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+        { name: "FastAPI", icon: SiFastapi, color: "#009688" },
+        { name: "Python", icon: FaPython, color: "#3776AB" },
+        { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+        { name: "pgvector", icon: SiPostgresql, color: "#336791" },
+        { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      ],
+      features: [
+        "GitHub Repository Indexing",
+        "Hybrid Semantic + Keyword Retrieval",
+        "Grounded Code Answers with Citations",
+        "AST-Based Chunking and Embeddings",
+        "Prompt Injection Guardrails",
+        "Repository Q&A with Source Links",
+      ],
+      githubUrl: "https://github.com/SriramChowdaryMogalapu/RepoMind",
+      liveUrl: "https://repo-mind-black.vercel.app/",
+      status: "Completed",
+    },
     // {
     //     id: 3,
     //     title: 'Power BI Business Dashboards',
@@ -156,14 +185,14 @@ const Projects = () => {
     //     status: 'Completed'
     // },
     {
-      id: 6,
+      id: 4,
       title: "ICCINS-2025 Conference Website",
       category: "frontend",
       description:
         "Official website for International Conference organized by CSE Department, NIT Raipur.",
       longDescription:
         "Currently serving as Web Master for the ICCINS-2025 International Conference website organized by the Computer Science and Engineering Department at NIT Raipur. Responsible for website development, maintenance, content updates, and ensuring optimal user experience for conference attendees.",
-      image: "/project6.jpg",
+      image: "/project4.jpg",
       technologies: [
         { name: "HTML/CSS", icon: FaCode, color: "#E34F26" },
         { name: "JavaScript", icon: FaCode, color: "#F7DF1E" },
@@ -214,6 +243,7 @@ const Projects = () => {
 
   const categories = [
     { id: "all", label: "All Projects" },
+    { id: "ai", label: "Artificial Intelligence" },
     { id: "fullstack", label: "Full Stack" },
     { id: "frontend", label: "Frontend" },
     { id: "backend", label: "Backend" },
@@ -299,9 +329,8 @@ const Projects = () => {
             {categories.map((category) => (
               <button
                 key={category.id}
-                className={`filter-tab ${
-                  filter === category.id ? "active" : ""
-                }`}
+                className={`filter-tab ${filter === category.id ? "active" : ""
+                  }`}
                 onClick={() => setFilter(category.id)}
               >
                 {category.label}
