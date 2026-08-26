@@ -65,6 +65,11 @@
       <image:title>Crypto Notes Application</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://sriram-chowdary.netlify.app/project3.jpg</image:loc>
+      <image:caption>Repo Mind - AI-powered codebase intelligence platform that helps users explore any GitHub repository through conversational Q&A with grounded code citations</image:caption>
+      <image:title>RepoMind Project</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://sriram-chowdary.netlify.app/project6.jpg</image:loc>
       <image:caption>ICCINS-2025 Conference Website - Official conference website for NIT Raipur</image:caption>
       <image:title>Conference Website Project</image:title>
